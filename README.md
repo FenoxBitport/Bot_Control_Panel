@@ -1,7 +1,7 @@
 # BOT CONTROL PANEL
 Look after your bot from your desktop, without opening the hosting
-website. Works with any bot hosted on a Pterodactyl hosting panel.
-
+website. Works with any bot hosted on a Pterodactyl or Pelican hosting
+panel, on one hosting site or several.
 
 GETTING STARTED
 ---------------
@@ -13,8 +13,15 @@ GETTING STARTED
 3. API key: on your hosting site, go to Account > API Credentials, create
    a key (description "Bot Control Panel", leave Allowed IPs empty) and
    copy it. It starts with ptlc_
-4. Paste both in and click Connect. Tick "Remember me" to stay logged in.
-   Your key is then saved encrypted, locked to your Windows account.
+   (On Pelican panels it's under your profile > API Keys and starts
+   with pacc_. The app checks the address and tells you which it found.)
+4. Paste both in and click Connect. Tick "Remember this site" to stay
+   logged in. Your key is then saved encrypted, locked to your Windows
+   account.
+
+More than one hosting site? Add each one ("+ Add another site" on the
+login screen). Switch between them with the globe button on the left,
+without logging out. Each key is only ever sent to its own site.
 
 Windows may say "Windows protected your PC" the first time you install.
 Click "More info", then "Run anyway". That's normal for programs that
@@ -23,6 +30,10 @@ aren't signed with a paid certificate.
 
 WHAT YOU CAN DO
 ---------------
+- Your servers: status and live CPU, memory and disk, refreshed every
+  few seconds.
+- Hosting sites (globe icon): switch between your hosting sites, add
+  one, or forget one, without logging out.
 - Console: see what your bot prints, and send it commands.
 - Start, Restart, Stop, and live CPU, memory, disk and uptime.
 - Files: edit your bot's code. After saving, press Restart so your bot
@@ -44,10 +55,14 @@ KEEPING IT SAFE
   phone or your Discord each time the program opens, after it's left
   alone, and when Windows locks or the computer sleeps.
 - Lost your phone? Click "Can't get a code?" on the lock screen. This
-  removes the lock AND your saved login, so you'll paste your key again.
-- Your key is only ever sent to your hosting site, over a secure
+  removes the lock AND your saved sites, so you'll paste your keys again.
+- Each key is only ever sent to its own hosting site, over a secure
   connection. Nothing else leaves your computer, except bug reports you
   choose to send.
+- Everything the program saves is encrypted (AES-256, locked to your
+  Windows account). Its temporary files are removed when you close it.
+  If it ever can't open its encrypted file, it sets it aside instead of
+  replacing it, so nothing is lost.
 
 
 SOMETHING NOT WORKING?
@@ -62,11 +77,12 @@ Bug reports:  https://github.com/FenoxBitport/Bot_Control_Panel/issues
 
 UPDATING AND REMOVING
 ---------------------
-- To update, run the new "Bot-Control-Panel-Setup" file. Your saved login
-  and settings are kept.
+- To update, run the new "Bot-Control-Panel-Setup" file. Your saved
+  sites and settings are kept.
 - To remove the program, use "Uninstall Bot Control Panel.exe" in this
-  folder, or Windows Settings > Apps. Your saved login and settings stay
+  folder, or Windows Settings > Apps. Your saved sites and settings stay
   in your Windows profile, in case you install it again.
+- New versions: https://github.com/FenoxBitport/Bot_Control_Panel/releases
 
 
 LICENSE
